@@ -14,9 +14,9 @@ Jph=35 #//mA/cm2
 J0=1.95e-10 #//mA/cm2
 T=int(input('La température par défault est de 300 K\nVeuillez saisire une température : ')) #//K
 n=1
-V=np.linspace(0,1,100) #//V
+V=np.linspace(-30,30,100) #//V
 
 alpha=cst.q/(n*cst.k*T)
 J=Jph-J0*(np.exp(alpha*V)-1); #//(3)
-plt.plot(J,V)
+plt.plot(V,J)
 plt.show()
